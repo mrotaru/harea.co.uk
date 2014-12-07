@@ -4,6 +4,17 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+/*
+ * From starter-template.css
+ */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
 .btn-default,
 .btn-primary,
 .btn-success,
