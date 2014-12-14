@@ -24,6 +24,11 @@ body {
     height: 100%;
     background-image: url('../img/brickwall.png');
 }
+
+.navbar-inverse .navbar-nav > li.navbar-info > a {
+    color: #fff;
+}
+
 .btn-default,
 .btn-primary,
 .btn-success,
