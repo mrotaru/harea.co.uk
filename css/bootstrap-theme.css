@@ -12,9 +12,13 @@ body {
 }
 .starter-template {
   padding: 40px 15px;
-  text-align: center;
+  text-align: left;
 }
 
+h2 {
+    font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
+ k
+}
 
 html {
     height: 100%;
@@ -41,6 +45,16 @@ body {
         display: none;
     }
 }
+
+ul.info {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.info > li.primary {
+    font-size: 1.2em;
+}
+
 
 .btn-default,
 .btn-primary,
