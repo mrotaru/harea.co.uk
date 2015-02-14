@@ -16,12 +16,26 @@ body {
   height: 100%;
 }
 
+.footer > .container {
+  text-align: center;
+  color: #DDD;
+  padding: 5px;
+}
+
 .container-main {
   height: 100%;
 }
 
 .blob {
     margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #222;
+    bottom: 0;
+    height: 40px;
+    position: absolute;
+    width: 100%;
 }
 
 h2 {
