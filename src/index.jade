@@ -6,15 +6,16 @@ include lib/mixins
     .logo
       img(src='img/logo.png')
     .info-container
-      ul.info
+      ul.info.info-company
         li.primary Harea Construction Ltd
         li.important 28 Grasmere Parade
         li.important SL2 5HZ
         li.secondary London, UK
   .col-sm-8.right-column
-    h2 What We Do
-    p With over 10 years experience, we can provide the following services:
-    ul(info='')
-      li.important construction
-      li.important another one
-      li.important something else
+    .info-container.light-bg
+      h2 What We Do
+      p With over 10 years experience, we can provide the following services:
+      ul(info='')
+        li.important construction
+        li.important another one
+        li.important something else

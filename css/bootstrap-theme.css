@@ -30,13 +30,13 @@ h2 {
 
 .left-column {
     padding-top: 40px;
-    background: rgba(255,255,255,0.5);
-    color: black;
+    background: rgba(0,0,0,0.5);
+    color: #DDD;
 }
 
 @media (min-width: 768px) {
     .left-column {
-        margin-top: 25px;
+        height: 100%;
     }
 }
 
@@ -81,6 +81,14 @@ ul.info > li.primary {
     font-size: 1.2em;
 }
 
+ul.info-company > li.primary {
+    font-weight: 700;
+}
+
+.light-bg {
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+}
 
 .btn-default,
 .btn-primary,
