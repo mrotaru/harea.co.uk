@@ -1,26 +1,18 @@
-extends layout
+include lib/mixins
 
-block content
++head("Harea Construction Ltd | About")
++body("about.html")
   h2 About Us
-  |           
   p.blob
     | Harea.co.uk was founded in 2010 by Ion Harea.
-  |         
   .logo
     img(src='img/logo.png')
-  |         
   .info-container
     ul.info
       li.primary Harea Construction Ltd
-      |                 
       li.important 28 Grasmere Parade
-      |                 
       li.important SL2 5HZ
-      |                 
       li.important London, UK
-      |                 
       li.secondary UTR: 6279805941
-      |                 
       li.secondary CRN: 8850624
-      |                 
       li.secondary VAT Registration Number: 194891650

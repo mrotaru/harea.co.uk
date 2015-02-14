@@ -1,20 +1,16 @@
-extends layout
+include lib/mixins
 
-block content
++head("Harea Construction Ltd | Contact")
++body("contact.html")
   h2 Contact Info
-  |           
   p You can reach us by phone, or by email.
-  |           
   ul.info
     li.primary
       span.glyphicon.glyphicon-earphone(aria-hidden='true')
-      |                     (+44) 0175 351 0607
-    |               
+      | (+44) 0175 351 0607
     li.primary
       span.glyphicon.glyphicon-earphone(aria-hidden='true')
-      |                     (+44) 0756 120 1301 (mobile)
-    |               
+      | (+44) 0756 120 1301 (mobile)
     li.primary
       span.glyphicon.glyphicon-envelope(aria-hidden='true')
-      |                   
       a(href='mailto:hareaconstruction@yahoo.co.uk') hareaconstruction@yahoo.co.uk
