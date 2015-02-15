@@ -11,6 +11,8 @@ mixin head(title)
     link(href='css/bootstrap.css', rel='stylesheet')
     // Custom styles for this template
     link(href='css/bootstrap-theme.css', rel='stylesheet')
+    link(href='css/custom.css', rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
       script(src='../../assets/js/ie8-responsive-file-warning.js')
@@ -22,8 +24,9 @@ mixin head(title)
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
 mixin workImage(img, title, description)
-  .thumbnail
-    img(src=img)
+  .col-xs-4
+    a.thumbnail(href='img/work/' + img)
+      img(src='img/work/' + img)
     if title
       .caption
         h3 #{title}
@@ -39,7 +42,7 @@ mixin menuItem(text, uri, active)
   
 mixin body(currentPage)
   body&attributes(attributes)
-    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    nav.navbar.navbar-inverse(role='navigation')
       .container
         .navbar-header
           .navbar-header-info
@@ -60,9 +63,14 @@ mixin body(currentPage)
               a(href='#')
                 span.glyphicon.glyphicon-earphone(aria-hidden='true')
                 | (+44) 0756 120 1301
-    .container.container-main
-      .starter-template
-        block
+    .container.clearfix
+      block
+
+
+    .footer
+      .container
+        p
+          | © Harea Ltd 2015
 
     // JavaScript
     script.
@@ -77,6 +85,3 @@ mixin body(currentPage)
     script(src='js/vendor/bootstrap.js')
     // IE10 viewport hack for Surface/desktop Windows 8 bug
     script(src='js/vendor/ie10-viewport-bug-workaround.js')
-    .footer
-      .container
-        | © Harea Ltd 2015
