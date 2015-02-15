@@ -20,17 +20,15 @@ mixin head(title)
     // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     //if lt IE 9
       script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
-      |       
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
-mixin workImage(img, title, description)
-  .col-xs-4
+mixin workImage(img, description)
+  .col-xs-4.col-thumbnail
     a.thumbnail(href='img/work/' + img)
       img(src='img/work/' + img)
-    if title
+    if description
       .caption
-        h3 #{title}
-        p description 
+        p #{description}
 
 mixin menuItem(text, uri, active)
   if uri == active
