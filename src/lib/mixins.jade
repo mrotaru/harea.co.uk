@@ -30,6 +30,15 @@ mixin workImage(img, description)
       .caption
         p #{description}
 
+mixin currentWorkImage(img, description)
+  .col-xs-4.col-thumbnail.work-item
+    a.thumbnail(href='img/work/' + img)
+      img(src='img/work/thumbs/' + img)
+    if description
+      .caption
+        img.work-status(src='img/bullet_red.png')
+        p #{description}
+
 mixin menuItem(text, uri, active)
   if uri == active
     li.active

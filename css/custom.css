@@ -7,6 +7,15 @@ body {
     font-size: 18px;
 }
 
+.work-status {
+  display: inline-block;
+  top: -1px;
+}
+
+.work-item p {
+  display: inline-block;
+}
+
 /* footer */
 /* style */
 .footer {
