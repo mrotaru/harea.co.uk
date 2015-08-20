@@ -3,7 +3,7 @@ nav.navbar.navbar-inverse(role='navigation')
     .navbar-header
       .navbar-header-info
         span.glyphicon.glyphicon-earphone(aria-hidden='true')
-        | (+44) 0756 120 1301
+        | #{phoneNumber}
       button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
         span.sr-only Toggle navigation
         span.icon-bar
@@ -16,4 +16,5 @@ nav.navbar.navbar-inverse(role='navigation')
             a(href= key) #{page.title}
         li.navbar-info
           a(href='#')
-            span.glyphicon.glyphicon-earphone(aria-hidden='true') #{phoneNumber}
+            span.glyphicon.glyphicon-earphone(aria-hidden='true')
+            | #{phoneNumber}
