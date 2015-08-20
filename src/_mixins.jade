@@ -1,0 +1,33 @@
+mixin workImage(img, description)
+  .col-xs-4.col-thumbnail
+    a.thumbnail(href='img/work/' + img)
+      img(src='img/work/thumbs/' + img)
+    if description
+      .caption
+        p #{description}
+
+mixin currentWorkImage(img, description)
+  .col-xs-4.col-thumbnail.work-item
+    a.thumbnail(href='img/work/' + img)
+      img(src='img/work/thumbs/' + img)
+    if description
+      .caption
+        img.work-status(src='img/bullet_red.png')
+        p #{description}
+
+mixin verticalMenu()
+  .col-sm-3
+    .sidebar-nav
+      .navbar.navbar-default(role='navigation')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.sidebar-navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.visible-xs.navbar-brand Sidebar menu
+        .navbar-collapse.collapse.sidebar-navbar-collapse
+          ul.nav.navbar-nav
+            for page in pages
+              li(class=currentPage === page.href ? "active" : "")
+                a(href= page.href) #{page.title}

@@ -1,3 +1,8 @@
+.front-page {
+  background-image: url('img/bg.png');
+  background-size: cover;
+}
+
 .thumbnail {
     margin-bottom: 0px;
 }
@@ -16,8 +21,6 @@ body {
   display: inline-block;
 }
 
-/* footer */
-/* style */
 .footer {
     background-color: #222;
     color: #AAA;
@@ -34,6 +37,7 @@ html {
 body {
     margin-bottom: 40px;
 }
+
 .footer {
     bottom: 0;
     height: 40px;
