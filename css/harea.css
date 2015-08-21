@@ -1,139 +1,24 @@
-.front-page {
-  background-image: url('../img/bg.png');
-  background-size: cover;
-}
-
-.thumbnail {
-    margin-bottom: 0px;
-}
-
-@media (min-width: 768px) {
-  .sidebar-nav .navbar {
-    background-color: transparent;
-    border-color: transparent;
-    background-image: none;
-  }
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-  }
-  .sidebar-nav .navbar ul:not {
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: #DDD;
-  }
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li > a:focus {
-    color: #CCC;
-  }
-
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover,
-  .navbar-default .navbar-nav > .active > a:focus {
-    background-image: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #CCC;
-  }
-
-}
-
-body {
-    font-family: "Lato",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-}
-
-.work-status {
-  display: inline-block;
-  top: -1px;
-}
-
-.work-item p {
-  display: inline-block;
-}
-
-.footer {
-    background-color: #222;
-    color: #AAA;
-}
-.footer p {
-    margin-top: 5px;
-    text-align: center;
-}
-
+/* Core CSS */
+/* scaffolding */
 html {
     min-height: 100%;
     position: relative;
 }
+
 body {
+    font-size: 18px;
     margin-bottom: 40px;
+    font-family: "Lato",Helvetica,Arial,sans-serif;
+    background-image: url('../img/brickwall.png');
 }
 
-.footer {
-    bottom: 0;
-    height: 40px;
-    position: absolute;
-    width: 100%;
-}
 body > .container {
     padding: 0px 15px 0;
 }
-.container .text-muted {
-    margin: 20px 0;
-}
-.footer > .container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-code {
-    font-size: 80%;
-}
- 
-/* gallery */
-
-.row-gallery ul {         
-          padding:0 0 0 0;
-          margin:0 0 0 0;
-}
-
-.row-gallery ul li {         
-          list-style:none;
-          margin-bottom:25px;           
-}
-
-.row-gallery ul li img {         
-          cursor: pointer;
-}
 
 .container-main {
-  height: 100%;
+    height: 100%;
 }
-
-.blob {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
-}
-
-.navbar {
-    margin-bottom: 0px;
-}
-
-#main-button {
-    background-color: #ff6600;
-}
-
 
 .left-column {
     padding-top: 40px;
@@ -153,8 +38,105 @@ h2 {
     padding-left: 40px;
 }
 
-body {
-    background-image: url('../img/brickwall.png');
+.footer {
+    bottom: 0;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    background-color: #222;
+    color: #AAA;
+}
+.footer p {
+    margin-top: 5px;
+    text-align: center;
+}
+.footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* type */
+.container .text-muted {
+    margin: 20px 0;
+}
+h2 {
+    font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
+}
+.blob {
+    margin-bottom: 20px;
+}
+ul.info {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.info > li.primary {
+    font-size: 1.2em;
+}
+
+ul.info-company > li.primary {
+    font-weight: 700;
+}
+
+/* code */
+code {
+    font-size: 80%;
+}
+/* grid */
+/* tables */
+/* forms */
+/* buttons */
+#main-button {
+    background-color: #ff6600;
+}
+
+/* Components */
+/* component-animations */
+/* dropdowns */
+/* button-groups */
+/* input-groups */
+/* navs */
+/* navbar */
+.navbar {
+    margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+    .sidebar-nav .navbar {
+        background-color: transparent;
+        border-color: transparent;
+        background-image: none;
+    }
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+    }
+    .sidebar-nav .navbar ul:not {
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: #DDD;
+    }
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: #CCC;
+    }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        background-image: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #CCC;
+    }
 }
 
 .navbar-inverse .navbar-nav > li.navbar-info > a, .navbar-info {
@@ -173,21 +155,63 @@ body {
         display: none;
     }
 }
-
-ul.info {
-    list-style: none;
-    padding-left: 0px;
+/* breadcrumbs */
+/* pagination */
+/* pager */
+/* labels */
+/* badges */
+/* jumbotron */
+/* thumbnails */
+.thumbnail {
+    margin-bottom: 0px;
+}
+/* alerts */
+/* progress-bars */
+/* media */
+.work-status {
+    display: inline-block;
+    top: -1px;
 }
 
-ul.info > li.primary {
-    font-size: 1.2em;
+.work-item p {
+    display: inline-block;
 }
 
-ul.info-company > li.primary {
-    font-weight: 700;
+.row-gallery ul {         
+    padding:0 0 0 0;
+    margin:0 0 0 0;
 }
 
+.row-gallery ul li {         
+    list-style:none;
+    margin-bottom:25px;           
+}
+
+.row-gallery ul li img {         
+    cursor: pointer;
+}
+
+/* list-group */
+/* panels */
+/* responsive-embed */
+/* wells */
+/* close */
+
+/* Components w/ JavaScript */
+/* modals */
+/* tooltip */
+/* popovers */
+/* carousel */
+
+/* Utility classes */
 .light-bg {
     padding: 15px;
     background: rgba(255,255,255,0.5);
 }
+.front-page {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+}
+/* utilities */
+/* responsive-utilities */
+/* gallery */
