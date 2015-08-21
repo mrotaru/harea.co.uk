@@ -1,7 +1,9 @@
-include lib/mixins
+extends _layout
 
-+head("Harea Construction Ltd | Sample Panels")
-+body("sample-panels.html")
+block variables
+  - currentPage = "sample-panels.html"
+
+block body
   h2 Sample Panels
   .row.row-gallery
     +workImage("1.png", " ")

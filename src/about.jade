@@ -1,7 +1,9 @@
-include lib/mixins
+extends _layout
 
-+head("Harea Construction Ltd | About")
-+body("about.html")
+block variables
+  - currentPage = "about.html"
+
+block body
   h2 About Us
   p.blob
       | Harea Construction Ltd was founded by Ion Harea and is

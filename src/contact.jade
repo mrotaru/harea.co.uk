@@ -1,7 +1,9 @@
-include lib/mixins
+extends _layout
 
-+head("Harea Construction Ltd | Contact")
-+body("contact.html")
+block variables
+  - currentPage = "contact.html"
+
+block body
   h2 Contact Info
   p You can reach us by phone, or by email.
   ul.info
