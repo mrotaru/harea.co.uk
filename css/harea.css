@@ -25,7 +25,7 @@ body > .container {
 
 .left-column {
     padding-top: 40px;
-    background: rgba(0,0,0,0.5);
+    background-image: url('../img/binding_dark.png');
     color: #DDD;
 }
 

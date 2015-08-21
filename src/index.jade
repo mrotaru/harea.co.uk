@@ -5,34 +5,23 @@ block variables
   - currentPage = "index.html"
 
 block body
-  .col-sm-3.left-column
-    .logo
-      img(src='img/logo.png')
-    .info-container
-      ul.info.info-company
-        li.primary Harea Construction Ltd
-        li.important 28 Grasmere Parade
-        li.important SL2 5HZ
-        li.secondary London, UK
-      +verticalMenu
-  .col-sm-8.right-column
-    .info-container.light-bg
-      h2 What We Do
-      p 
-        | We are a small company with over 10 years experience, specialising in 
-        strong
-          | brickwork
-        |. We can provide the following building services:
+  .info-container.light-bg
+    h2 What We Do
+    p 
+      | We are a small company with over 10 years experience, specialising in 
+      strong
+        | brickwork
+      |. We can provide the following building services:
 
-      ul(info='')
-        li.important modern houses
-        li.important appartment blocks
-        li.important warehouses and other commercial buildings
-        li.important foundations
-        li.important garden walls
-        li.important
-          | many more. Please feel free to
-          a(href="contact.html") &nbsp;contact&nbsp;
-          | us for details.
-      a.btn.btn-primary.btn-lg.active(href='work.html')
-        | See Our Work
+    ul(info='')
+      li.important modern houses
+      li.important appartment blocks
+      li.important warehouses and other commercial buildings
+      li.important foundations
+      li.important garden walls
+      li.important
+        | many more. Please feel free to
+        a(href="contact.html") &nbsp;contact&nbsp;
+        | us for details.
+    a.btn.btn-primary.btn-lg.active(href='work.html')
+      | See Our Work
