@@ -8,23 +8,27 @@ html {
 
 body {
     height: 100%;
+    min-height: 100%;
     font-size: 18px;
-    margin-bottom: 40px;
     font-family: "Lato",Helvetica,Arial,sans-serif;
     background-image: url('../img/brickwall.png');
 }
 
 body > .container {
     padding: 0px 15px 0;
-    height: 100%;
 }
 
-.container-main {
+.row-main {
+    min-height: 100%;
+    height: auto;
+}
+
+.row-main > .container {
     height: 100%;
+    min-height: 100%;
 }
 
 .left-column {
-    padding-top: 40px;
     background-image: url('../img/binding_dark.png');
     color: #DDD;
 }
@@ -38,13 +42,17 @@ body > .container {
 .right-column {
     height: 100%;
     padding-top: 20px;
-    padding-left: 40px;
+    background-color: #EEE;
+}
+
+.wrapper {
+    padding: 0px;
+    background-image: url('../img/binding_dark.png');
 }
 
 .footer {
     bottom: 0;
     height: 40px;
-    position: absolute;
     width: 100%;
     background-color: #222;
     color: #AAA;

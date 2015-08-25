@@ -15,7 +15,7 @@ include _mixins
 block variables
 
 -
-  var containerClass = 'container clearfix'
+  var containerClass = 'container container-main clearfix'
   if(pages[currentPage].containerClass) {
     containerClass += ' ' + pages[currentPage].containerClass;
   }
@@ -45,18 +45,20 @@ html(lang=en)
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
   body(class=bodyClass)
     include _navigation 
-    .row
+    .row.row-main
       div(class=containerClass)
-        .col-sm-3.left-column
-          .logo
-            img(src='img/logo.png')
-          .info-container
-            ul.info.info-company
-              li.primary Harea Construction Ltd
-              li.important 28 Grasmere Parade
-              li.important SL2 5HZ
-              li.secondary London, UK
-            +verticalMenu
-        .col-sm-8.right-column
-          block body
-    include _footer
+        .wrapper.clearfix
+          .col-sm-3.left-column
+            .logo
+              img(src='img/logo.png')
+            .info-container
+              ul.info.info-company
+                li.primary Harea Construction Ltd
+                li.important 28 Grasmere Parade
+                li.important SL2 5HZ
+                li.secondary London, UK
+              +verticalMenu
+          .col-sm-9.right-column
+            block body
+    .row
+      include _footer
