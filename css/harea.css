@@ -1,14 +1,10 @@
 /* Core CSS */
 /* scaffolding */
-html {
-    min-height: 100%;
+html, body, .row-main, .row-main > .container, .wrapper, .left-column, .right-column  {
     height: 100%;
-    position: relative;
 }
 
 body {
-    height: 100%;
-    min-height: 100%;
     font-size: 18px;
     font-family: "Lato",Helvetica,Arial,sans-serif;
     background-image: url('../img/brickwall.png');
@@ -16,16 +12,6 @@ body {
 
 body > .container {
     padding: 0px 15px 0;
-}
-
-.row-main {
-    min-height: 100%;
-    height: auto;
-}
-
-.row-main > .container {
-    height: 100%;
-    min-height: 100%;
 }
 
 .left-column {
