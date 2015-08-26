@@ -55,11 +55,20 @@ html(lang=en)
               img(src='img/logo.png')
             .info-container
               h1 Harea Construction Ltd
+              h5 brickwork specialists
               +verticalMenu
-              ul.info.info-company
-                li.important 28 Grasmere Parade
-                li.important SL2 5HZ
-                li.secondary London, UK
+              .info.info-company
+                p We have over 10 years of experience providing high quality building services for:
+                ul(info='')
+                  li.important modern houses
+                  li.important appartment blocks
+                  li.important warehouses and other commercial buildings
+                  li.important foundations
+                  li.important garden walls
+                  li.important
+                    | many more. Please feel free to
+                    a(href="contact.html") &nbsp;contact&nbsp;
+                    | us for details.
           .col-sm-9.right-column
             block body
           include _footer
