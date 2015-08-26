@@ -6,7 +6,7 @@ html, body, .row-main, .row-main > .container, .wrapper, .right-column  {
 
 body {
     font-size: 18px;
-    font-family: "Lato",Helvetica,Arial,sans-serif;
+    font-family: "Forum", Helvetica, Arial, sans-serif;
     background-image: url('../img/brickwall.png');
 }
 
