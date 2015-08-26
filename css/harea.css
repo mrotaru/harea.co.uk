@@ -1,6 +1,6 @@
 /* Core CSS */
 /* scaffolding */
-html, body, .row-main, .row-main > .container, .wrapper, .left-column, .right-column  {
+html, body, .row-main, .row-main > .container, .wrapper, .right-column  {
     height: 100%;
 }
 
@@ -15,6 +15,7 @@ body > .container {
 }
 
 .left-column {
+    padding-top: 20px;
     background-image: url('../img/binding_dark.png');
     color: #DDD;
 }
@@ -22,6 +23,10 @@ body > .container {
 @media (min-width: 768px) {
     .left-column {
         height: 100%;
+    }
+    .right-column {
+        border: 1px solid #AAA;
+        border-left: 0px;
     }
 }
 
@@ -34,10 +39,17 @@ body > .container {
 .wrapper {
     padding: 0px;
     background-image: url('../img/binding_dark.png');
+    -webkit-box-shadow: 0px 0px 33px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 33px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 33px -6px rgba(0,0,0,0.75);
+}
+@media (min-width: 768px) {
+    .wrapper {
+        margin-top: 15px;
+    }
 }
 
 .footer {
-    bottom: 0;
     height: 40px;
     width: 100%;
     background-color: #222;
@@ -52,12 +64,23 @@ body > .container {
     padding-right: 15px;
 }
 
+.info-company {
+    margin-top: 7px;
+    border-top: 1px solid #333;
+    padding-top: 7px;
+}
+
 /* type */
+h1, h2, h3 {
+    font-family: 'Forum', cursive;
+}
+
+.info-container > h1 {
+    font-size: 26px;
+}
+
 .container .text-muted {
     margin: 20px 0;
-}
-h2 {
-    font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
 }
 .blob {
     margin-bottom: 20px;
@@ -97,6 +120,7 @@ code {
 .navbar {
     margin-bottom: 0px;
 }
+
 @media (min-width: 768px) {
     .sidebar-nav .navbar {
         background-color: transparent;

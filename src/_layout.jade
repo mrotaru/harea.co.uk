@@ -35,6 +35,8 @@ html(lang=en)
     link(href='css/bootstrap-theme.css', rel='stylesheet')
     link(href='css/harea.css', rel='stylesheet')
     link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css')
+    // link(href='https://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
       script(src='../../assets/js/ie8-responsive-file-warning.js')
@@ -52,12 +54,12 @@ html(lang=en)
             .logo
               img(src='img/logo.png')
             .info-container
+              h1 Harea Construction Ltd
+              +verticalMenu
               ul.info.info-company
-                li.primary Harea Construction Ltd
                 li.important 28 Grasmere Parade
                 li.important SL2 5HZ
                 li.secondary London, UK
-              +verticalMenu
           .col-sm-9.right-column
             block body
           include _footer
