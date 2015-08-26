@@ -1,8 +1,7 @@
-include _mixins
+include mixins
 
 - var title, currentPage;
-
-include _globals
+include globals
 block variables
 -
   var containerClass = 'container container-main clearfix'
@@ -36,7 +35,7 @@ html(lang=en)
       script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
   body(class=bodyClass)
-    include _navigation 
+    include navigation 
     .row.row-main
       div(class=containerClass)
         .wrapper.clearfix
@@ -61,4 +60,4 @@ html(lang=en)
                     | us for details.
           .col-sm-9.right-column
             block body
-          include _footer
+          include footer
