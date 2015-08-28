@@ -32,11 +32,8 @@ mixin verticalMenu()
               a(href= key) #{page.title}
 
 mixin slideshow(options)
-  .slider
+  .fader
     ul
       for pic in options.pictures
         li
           img(src=pic)
-
-
-
