@@ -3,6 +3,8 @@ $(function(){
   window.imageFader = function(opts) {
 
     var imgs = [];
+    $('.fader').addClass("clearfix").css("overflow", "hidden");
+    $('.fader ul').addClass("clearfix").css("padding", "0px");
 
     function timeout(index) {
       var toHide = index === 0 ? imgs.length-1 : index-1;
