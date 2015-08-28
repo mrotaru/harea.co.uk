@@ -1,26 +1,10 @@
 extends lib/layout
+include lib/mixins
 
 block variables
-  - currentPage = "index.html"
+  - currentPage = "index.html";
+  - jsFiles.push("js/vendor/unslider.js");
+  - jsFiles.push("js/main.js");
 
 block body
-  .info-container.light-bg
-    h2 What We Do
-    p 
-      | We are a small company with over 10 years experience, specialising in 
-      strong
-        | brickwork
-      |. We can provide the following building services:
-
-    ul(info='')
-      li.important modern houses
-      li.important appartment blocks
-      li.important warehouses and other commercial buildings
-      li.important foundations
-      li.important garden walls
-      li.important
-        | many more. Please feel free to
-        a(href="contact.html") &nbsp;contact&nbsp;
-        | us for details.
-    a.btn.btn-primary.btn-lg.active(href='work.html')
-      | See Our Work
+  +slideshow({pictures: ["img/work/4.png", "img/work/5.png"]})

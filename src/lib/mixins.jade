@@ -30,3 +30,13 @@ mixin verticalMenu()
           for page, key in pages
             li(class=currentPage === key ? "active" : "")
               a(href= key) #{page.title}
+
+mixin slideshow(options)
+  .slider
+    ul
+      for pic in options.pictures
+        li
+          img(src=pic)
+
+
+

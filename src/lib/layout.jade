@@ -20,11 +20,8 @@ html(lang=en)
     meta(name='author', content='')
     link(rel='icon', href='favicon.ico')
     title #{pages[currentPage].title}
-    link(href='css/bootstrap.css', rel='stylesheet')
-    link(href='css/bootstrap-theme.css', rel='stylesheet')
-    link(href='css/harea.css', rel='stylesheet')
-    link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-    // link(href='https://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css')
+    for cssFile in cssFiles
+      link(href=cssFile, rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9

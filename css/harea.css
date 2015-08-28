@@ -237,6 +237,11 @@ code {
 /* tooltip */
 /* popovers */
 /* carousel */
+.slider { position: relative; overflow: auto; }
+.slider li { list-style: none; }
+.slider ul li { float: left; }
+.right-column > .slider {
+}
 
 /* Utility classes */
 .light-bg {
