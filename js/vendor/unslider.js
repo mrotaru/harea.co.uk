@@ -66,11 +66,14 @@
 		//  Work out what methods need calling
 		this.setup = function() {
 			//  Set the main element
-			this.el.css({
+			var elCss = {
 				overflow: 'hidden',
 				width: _.max[0],
-				height: this.opts.setHeight ? this.items.first().outerHeight() : 'auto'
-			});
+			};
+      if(this.opts.setHeight) {
+				elCss.height = this.items.first().outerHeight();
+      }
+      this.el.css(elCss);
 			
 			//  Set the relative widths
 			this.ul.css({width: (this.items.length * 100) + '%', position: 'relative'});
@@ -117,7 +120,7 @@
 			if(index < 0) index = (this.items.length - 1);
 			
 			var target = this.items.eq(index);
-			var obj = {height: _.opts.setHeigh ? target.outerHeight() : 'auto' };
+			var obj = _.opts.setHeight ? {height: target.outerHeight() } : {};
 			var speed = cb ? 5 : this.opts.speed;
 			
 			if(!this.ul.is(':animated')) {			
