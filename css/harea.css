@@ -4,6 +4,12 @@ html, body, .row-main, .row-main > .container, .wrapper, .right-column  {
     height: 100%;
 }
 
+@media (min-width: 768px) {
+    .row-main {
+        margin-right: 0px;
+    }
+}
+
 body {
     font-size: 18px;
     font-family: "Forum", Helvetica, Arial, sans-serif;
