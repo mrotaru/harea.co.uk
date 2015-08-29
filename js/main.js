@@ -8,8 +8,8 @@ $(function(){
 
     function timeout(index) {
       var toHide = index === 0 ? imgs.length-1 : index-1;
-      imgs[toHide].hide();
-      imgs[index].show();
+      imgs[toHide].animate({opacity: 0}, opts.delay/2);
+      imgs[index].animate({opacity: 1}, opts.delay/2);
       setTimeout(function() {  
         index = index === imgs.length-1 ? 0 : index+1;
         timeout(index);
@@ -18,7 +18,7 @@ $(function(){
 
     $('.fader ul li').each(function(){
       imgs.push($(this));
-      $(this).hide();
+//      $(this).hide();
     });
 
     timeout(0);

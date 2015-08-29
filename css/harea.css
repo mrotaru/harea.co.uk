@@ -250,8 +250,23 @@ code {
 /* popovers */
 /* carousel */
 /*.slider { position: relative; overflow: auto; }*/
-.fader li { list-style: none; }
-.fader ul li { float: left; }
+.fader, .fader ul, .fader ul li {
+  height: 100%;
+}
+.fader ul { position: relative; }
+.fader li { list-style: none; position:  relative; }
+.fader ul li {
+  float: left;
+  overflow: hidden;
+  position: relative;
+/*  width: 100%;*/
+}
+.fader img {
+  position: absolute;
+/*  height: 100%;*/
+  top: 0px;
+  left: 0px;
+}
 .right-column > .fader {
 }
 
