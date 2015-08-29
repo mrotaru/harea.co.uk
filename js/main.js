@@ -18,7 +18,6 @@ $(function(){
 
     $('.fader ul li').each(function(){
       imgs.push($(this));
-//      $(this).hide();
     });
 
     timeout(0);

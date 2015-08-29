@@ -90,6 +90,11 @@ body.front-page .right-column {
     padding-top: 7px;
 }
 
+.info {
+  font-weight: bold;
+  padding: 15px;
+}
+
 /* type */
 h1, h2, h3 {
     font-family: 'Forum', cursive;
@@ -265,6 +270,7 @@ code {
   left: 0px;
 }
 .right-column > .fader {
+  height: 80%;
 }
 
 /* Utility classes */
