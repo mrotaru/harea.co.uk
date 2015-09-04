@@ -5,10 +5,11 @@ include globals
 block variables
 -
   var containerClass = 'container container-main clearfix'
-  if(pages[currentPage].containerClass) {
+  if(currentPage && pages[currentPage].containerClass) {
     containerClass += ' ' + pages[currentPage].containerClass;
   }
-  var bodyClass = pages[currentPage].bodyClass || '';
+  var bodyClass = currentPage ? pages[currentPage].bodyClass || ''  : '';
+  var title =  currentPage ? pages[currentPage].title || ''  : '';
 
 doctype html
 html(lang=en)
@@ -19,7 +20,7 @@ html(lang=en)
     meta(name='description', content='')
     meta(name='author', content='')
     link(rel='icon', href='favicon.ico')
-    title #{pages[currentPage].title}
+    title #{title}
     for cssFile in cssFiles
       link(href=cssFile, rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css')

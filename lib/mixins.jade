@@ -1,15 +1,20 @@
 mixin workImage(img, description)
   .col-xs-4.col-thumbnail
-    a.thumbnail(href='img/work/' + img)
-      img(src='img/work/thumbs/' + img)
+    a.thumbnail(href='content/' + img)
+      img(src='content/thumbs/' + img)
     if description
       .caption
         p #{description}
 
+mixin contentImage(img)
+  .col-xs-4.col-thumbnail
+    a.thumbnail(href='content/' + img)
+      img(src='content/thumbs/' + img)
+
 mixin currentWorkImage(img, description)
   .col-xs-4.col-thumbnail.work-item
-    a.thumbnail(href='img/work/' + img)
-      img(src='img/work/thumbs/' + img)
+    a.thumbnail(href='content/' + img)
+      img(src='content/thumbs/' + img)
     if description
       .caption
         img.work-status(src='img/bullet_red.png')

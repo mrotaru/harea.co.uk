@@ -4,16 +4,12 @@ MOGRIFY=C:/pdev/imagemagick/mogrify.exe
 # CONVERT_OPTIONS="-sigmoidal-contrast 7,50%"
 CONTENT_OUT=build/content
 
-build:
-	rm -rf build/
+clean:
+	rm -rf build
 	mkdir build
 	mkdir -p $(CONTENT_OUT)
-	mkdir -p $(CONTENT_OUT)/thumbs
-	jade index.jade --out build
-	jade contact.jade --out build
-	jade about.jade --out build
-	jade sample-panels.jade --out build
-	jade work.jade --out build
+
+static:
 	cp -r css build
 	cp -r fonts build
 	cp -r img build
@@ -21,9 +17,12 @@ build:
 	cp favicon.ico build
 	cp robots.txt build
 
-css:
-	rm -rf build/css
-	cp -r css build
+jade:
+	jade index.jade --out build
+	jade contact.jade --out build
+	jade about.jade --out build
+	jade sample-panels.jade --out build
+	jade work.jade --out build
 
 img:
 	rm -rf $(CONTENT_OUT)
@@ -31,12 +30,28 @@ img:
 	for f in content/*.jpg ; do echo "$$f" && $(CONVERT) -equalize -contrast -resize 1024x "$$f"  "$(CONTENT_OUT)"/$$(basename "$$f") ; done
 	for f in content/*.png ; do echo "$$f" && $(CONVERT) -equalize -contrast -resize 1024x "$$f"  "$(CONTENT_OUT)"/$$(basename "$$f" .png).jpg ; done
 
+content-listing:
+	echo "include ../../lib/mixins" > $(CONTENT_OUT)/content.jade
+	echo "extends ../../lib/layout" >> $(CONTENT_OUT)/content.jade
+	echo "block body" >> $(CONTENT_OUT)/content.jade
+#   echo "  for img in images" >> $(CONTENT_OUT)/content.jade
+#   echo "    +contentImage(img)" >> $(CONTENT_OUT)/content.jade
+#   echo "-" >> $(CONTENT_OUT)/content.jade
+#   echo "  var images=[" >> $(CONTENT_OUT)/content.jade
+#   for f in $(CONTENT_OUT)/*.jpg ; do echo "  \"$$f\"," >> $(CONTENT_OUT)/content.jade ; done
+	for f in $(CONTENT_OUT)/*.jpg ; do echo "  +contentImage(\""$$f"\")" >> $(CONTENT_OUT)/content.jade ; done
+#   echo "  \"\"" >> $(CONTENT_OUT)/content.jade
+#   echo "  ];" >> $(CONTENT_OUT)/content.jade
+#   echo "" >> $(CONTENT_OUT)/content.jade
+	jade build/content/content.jade --pretty --out build
+
 thumbs:
 	mkdir -p $(CONTENT_OUT)/thumbs
 	$(MOGRIFY) -format jpg -path $(CONTENT_OUT)/thumbs -thumbnail 350x350 $(CONTENT_OUT)/*.jpg
 
+build: clean static jade img content-listing thumbs
 
 deploy:
 	aws s3 sync ./build s3://harea.co.uk/ --profile "harea-s3" 
 
-.PHONY: build img css
+.PHONY: clean static jade img thumbs content-listing build deploy
