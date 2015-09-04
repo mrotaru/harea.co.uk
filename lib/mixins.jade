@@ -38,6 +38,32 @@ mixin addressList(addresses)
           span.addr-post-code
             |(#{address.postCode})
 
+mixin addressSidebar(address)
+  h5
+    span.glyphicon.glyphicon-map-marker
+      | 
+    span.addr-city
+      |#{address.city} 
+  if address.houseName
+    span.addr-house-name
+      |#{address.houseName} 
+  if address.houseNumber
+    span.addr-house-number
+      |#{address.houseNumber} 
+  if address.street
+    span.addr-street
+      |#{address.street}</br>
+  if address.borrough
+    span.addr-borrough
+      |#{address.borrough}, 
+  if address.city
+    span.addr-borrough
+      |#{address.city}</br>
+  if address.postCode
+    span.addr-post-code
+      |#{address.postCode}
+
+
 mixin verticalMenu()
   .sidebar-nav.hidden-xs
     .navbar.navbar-default(role='navigation')
