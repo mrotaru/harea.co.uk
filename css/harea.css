@@ -311,10 +311,6 @@ code {
     padding: 15px;
     background: rgba(255,255,255,0.5);
 }
-.front-page {
-    background-image: url('../img/bg.png');
-    background-size: cover;
-}
 /* utilities */
 /* responsive-utilities */
 /* gallery */

@@ -1,8 +1,14 @@
-SHELL=C:/Windows/System32/cmd.exe
+BIN=C:/Program\ Files\ (x86)/Git/bin
+CONVERT=C:/pdev/imagemagick/convert.exe
+MOGRIFY=C:/pdev/imagemagick/mogrify.exe
+# CONVERT_OPTIONS="-sigmoidal-contrast 7,50%"
+CONTENT_OUT=build/content
 
 build:
 	rm -rf build/
 	mkdir build
+	mkdir -p $(CONTENT_OUT)
+	mkdir -p $(CONTENT_OUT)/thumbs
 	jade index.jade --out build
 	jade contact.jade --out build
 	jade about.jade --out build
@@ -19,12 +25,16 @@ css:
 	rm -rf build/css
 	cp -r css build
 
-
-# for f in origs/*.jpg ; do convert "$f" -sigmoidal-contrast 7,50%  $(basename "$f" .jpg).png ; done && mogrify -format png -path thumbs -thumbnail 350x350 *.png && for f in img/work/*.png ; do optipng -clobber "$f"; done
 img:
-	for f in origs/*.jpg ; do convert "$$f" -sigmoidal-contrast 7,50%  $$(basename "$$f" .jpg).png ; done
-	mogrify -format png -path thumbs -thumbnail 350x350 *.png
-	for f in img/work/*.png ; do optipng -clobber "$$f"; done
+	rm -rf $(CONTENT_OUT)
+	mkdir -p $(CONTENT_OUT)
+	for f in content/*.jpg ; do echo "$$f" && $(CONVERT) -equalize -contrast -resize 1024x "$$f"  "$(CONTENT_OUT)"/$$(basename "$$f") ; done
+	for f in content/*.png ; do echo "$$f" && $(CONVERT) -equalize -contrast -resize 1024x "$$f"  "$(CONTENT_OUT)"/$$(basename "$$f" .png).jpg ; done
+
+thumbs:
+	mkdir -p $(CONTENT_OUT)/thumbs
+	$(MOGRIFY) -format jpg -path $(CONTENT_OUT)/thumbs -thumbnail 350x350 $(CONTENT_OUT)/*.jpg
+
 
 deploy:
 	aws s3 sync ./build s3://harea.co.uk/ --profile "harea-s3" 
