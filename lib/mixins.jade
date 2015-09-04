@@ -15,6 +15,29 @@ mixin currentWorkImage(img, description)
         img.work-status(src='img/bullet_red.png')
         p #{description}
 
+mixin addressList(addresses)
+  ul.addresses
+    for address in addresses
+      li
+        if address.houseName
+          span.addr-house-name
+            |#{address.houseName}, 
+        if address.houseNumber
+          span.addr-house-number
+            |#{address.houseNumber} 
+        if address.street
+          span.addr-street
+            |#{address.street}, 
+        if address.borrough
+          span.addr-borrough
+            |#{address.borrough}, 
+        if address.city
+          span.addr-city
+            |#{address.city} 
+        if address.postCode
+          span.addr-post-code
+            |(#{address.postCode})
+
 mixin verticalMenu()
   .sidebar-nav.hidden-xs
     .navbar.navbar-default(role='navigation')
