@@ -34,15 +34,7 @@ content-listing:
 	echo "include ../../lib/mixins" > $(CONTENT_OUT)/content.jade
 	echo "extends ../../lib/layout" >> $(CONTENT_OUT)/content.jade
 	echo "block body" >> $(CONTENT_OUT)/content.jade
-#   echo "  for img in images" >> $(CONTENT_OUT)/content.jade
-#   echo "    +contentImage(img)" >> $(CONTENT_OUT)/content.jade
-#   echo "-" >> $(CONTENT_OUT)/content.jade
-#   echo "  var images=[" >> $(CONTENT_OUT)/content.jade
-#   for f in $(CONTENT_OUT)/*.jpg ; do echo "  \"$$f\"," >> $(CONTENT_OUT)/content.jade ; done
-	for f in $(CONTENT_OUT)/*.jpg ; do echo "  +contentImage(\""$$f"\")" >> $(CONTENT_OUT)/content.jade ; done
-#   echo "  \"\"" >> $(CONTENT_OUT)/content.jade
-#   echo "  ];" >> $(CONTENT_OUT)/content.jade
-#   echo "" >> $(CONTENT_OUT)/content.jade
+	for f in $(CONTENT_OUT)/*.jpg ; do echo "  +contentImage(\""$$(basename "$$f")"\")" >> $(CONTENT_OUT)/content.jade ; done
 	jade build/content/content.jade --pretty --out build
 
 thumbs:
