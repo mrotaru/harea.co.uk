@@ -1,6 +1,6 @@
 /* Core CSS */
 /* scaffolding */
-html, body, .row-main, .row-main > .container, .wrapper, .right-column  {
+html, body, .container-main, .row-main, .wrapper, .right-column  {
     height: 100%;
 }
 
@@ -8,6 +8,10 @@ html, body, .row-main, .row-main > .container, .wrapper, .right-column  {
     .row-main {
         margin-right: 0px;
     }
+}
+
+.right-column {
+    overflow: auto;
 }
 
 body {
@@ -32,15 +36,6 @@ body.front-page .right-column {
         margin-right: auto;
         display: block;
     }
-}
-
-.left-column {
-    padding-top: 20px;
-    background-image: url('../img/binding_dark.png');
-    color: #DDD;
-}
-
-@media (min-width: 768px) {
     .left-column {
         height: 100%;
     }
@@ -48,6 +43,12 @@ body.front-page .right-column {
         border: 1px solid #AAA;
         border-left: 0px;
     }
+}
+
+.left-column {
+    padding-top: 20px;
+    background-image: url('../img/binding_dark.png');
+    color: #DDD;
 }
 
 .right-column {
